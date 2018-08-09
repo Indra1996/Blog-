@@ -1,0 +1,21 @@
+<h1><center>BLOG</center></h1>
+<div class="police">
+	Hi, This is a new blog page i have started.Please have a view of it.It is awesome once you start surfing. It'll draw you into a world of books where you'll get lost reading these books. If you're not a book reader this page is not recommended for you.
+</div>
+<table class="pol" align="center">
+  <tr class="row">
+    <th class="col-md-">Title</th>
+    <th class="col-md-3">Text</th>
+  </tr>
+</table>
+<% @articles.each do |article| %>
+
+<table class = "mytable" align="center">
+    <tr class="row">
+      <td class="col-md-3"><%= article.title %></td>
+      <td class="col-md-3"><%= article.text %></td>
+      <td class="col-md-3"><%= link_to 'Show', article_path(article) %></td>
+      <td class="col-md-3"><%= link_to 'Edit', edit_article_path(article) %></td>
+    </tr>
+</table>
+<% end %>
